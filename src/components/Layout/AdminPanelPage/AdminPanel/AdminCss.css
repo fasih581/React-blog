@@ -1,0 +1,57 @@
+body{
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Raleway', sans-serif !important;
+  background-color: #f1f1f1;
+}
+
+/* .box {
+  max-width: 1450px;
+  margin: 0 auto;
+  background-color: #f1f1f1;
+} */
+
+.adminPage {
+  display: flex;
+  justify-content: space-between;
+  height: 700px;
+  gap: 15px;
+}
+
+.BlogPreview {
+  margin: 44px 20px 0 0;
+}
+
+.subTitle.card-title.h5 {
+  font-weight: 400 !important;
+  font-size: medium !important;
+}
+
+form {
+    width: 50% !important;
+    padding: 50px 0px 20px 50px !important;
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #32b90d !important;
+    outline: 0;
+    box-shadow: unset !important;
+}
+
+.card {
+  width: 600px;
+}
+
+.formInput.form-control#ImgUrl:focus,
+.formInput.form-control#title:focus,
+.formInput.form-control#subTitle:focus,
+.formInput.form-control#description:focus {
+  border-color: #fc8181 !important;
+  box-shadow: unset !important;
+}
+
+.form-text {
+  color: red !important;
+}

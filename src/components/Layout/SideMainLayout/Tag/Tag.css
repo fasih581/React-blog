@@ -1,0 +1,43 @@
+.tagCard{
+    width: 448px; 
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.tagHead {
+    padding: 16px 10px;
+    background-color: #adadadc4;
+    color: black;
+}
+
+.tagHead .tagTittle{
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0;
+}
+
+.tagcontent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h4.tagNamePlace {
+    margin: 0;
+    background-color: #ccc;
+    color: black;
+    margin-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    /* font-size: 15px; */
+    font-weight: 300;
+}
+
+h4.tagNamePlace:hover{
+    background-color: black;
+    color: #fff;   
+}
+
+.tagSubTittle {
+    padding: 10px;
+}

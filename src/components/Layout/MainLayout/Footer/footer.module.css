@@ -1,0 +1,34 @@
+.footerhead{
+    margin-top: 50px;
+    background-color: #616161;
+    height: 100px;
+
+}
+
+.btnDiv{
+    padding: 20px 0 0 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn{
+    font-size: 15px;
+    padding: 12px 24px;
+    color: #fff;
+    border: none;
+    background-color: black;
+}
+
+.btn:hover{
+background-color: #ccc;
+color: #fff;
+}
+
+.btn.btnPrevious{
+    opacity: 0.40;
+}
+
+.btnNext:hover{
+    background-color: #ccc;
+    color: black;
+}

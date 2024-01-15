@@ -1,0 +1,18 @@
+.header{
+    margin: unset;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-align: center;
+}
+
+.heading{
+    font-size: 39px;
+}
+
+header p span{
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+}
