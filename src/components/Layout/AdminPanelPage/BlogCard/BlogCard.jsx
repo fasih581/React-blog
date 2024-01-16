@@ -1,4 +1,5 @@
 import React from "react";
+// import DatePicker from 'react-datepicker';
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useFormik } from "formik";
@@ -7,6 +8,8 @@ import { basicschema } from "../../../../validation/validation";
 import BlogPreview from "../BlogPreview/BlogPreview";
 import "../AdminPanel/AdminCss.css";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const onSubmit = async (values, actions) => {
   await new Promise((resolve) => setTimeout(resolve, 100));
@@ -16,10 +19,11 @@ const onSubmit = async (values, actions) => {
 const BlogCard = () => {
   const { values, errors, touched, handleChange, handleSubmit } = useFormik({
     initialValues: {
-      blogImg: "",
+      blogImg: " ",
       title: "",
       subTitle: "",
       description: "",
+      month: "",
     },
     validationSchema: basicschema,
     onSubmit: (data, actions) => {
@@ -32,10 +36,12 @@ const BlogCard = () => {
       .post("http://localhost:8080/blog", data)
       .then((response) => {
         console.log(response.data);
+        toast.success("Blog created successfully!");
         actions.resetForm();
       })
       .catch((error) => {
         console.log("An error occurred:", error);
+        toast.error("Error creating blog. Please try again.");
       });
   };
 
@@ -50,9 +56,7 @@ const BlogCard = () => {
             value={values.blogImg}
             onChange={handleChange}
             className={
-              errors.blogImg && touched.blogImg
-                ? "formInput form-control"
-                : "form-control"
+              errors.blogImg ? "formInput form-control" : "form-control"
             }
           />
           {errors.blogImg && touched.blogImg && (
@@ -67,12 +71,28 @@ const BlogCard = () => {
             name="title"
             value={values.title}
             onChange={handleChange}
-            className={
-              errors.title ? "formInput form-control" : "form-control"
-            }
+            className={errors.title ? "formInput form-control" : "form-control"}
           />
           {errors.title && touched.title && (
             <Form.Text>{errors.title}</Form.Text>
+          )}
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="month">
+          <Form.Label>DATE</Form.Label>
+          <Form.Control
+            type="date"
+            name="month"
+            value={values.month}
+            onChange={handleChange}
+            className={
+              errors.month && touched.month
+                ? "formInput form-control"
+                : "form-control"
+            }
+          />
+          {errors.month && touched.month && (
+            <Form.Text>{errors.month}</Form.Text>
           )}
         </Form.Group>
 
@@ -113,6 +133,7 @@ const BlogCard = () => {
           <Button variant="primary" type="submit">
             Submit
           </Button>
+          <ToastContainer />
         </div>
       </Form>
       <BlogPreview value={values} />

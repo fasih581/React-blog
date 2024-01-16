@@ -12,7 +12,7 @@ const BlogPreview = ({ value }) => {
         <Card.Body>
           <Card.Title>{value.title || "Title"}</Card.Title>
           <Card.Title className="subTitle">
-            {value.subTitle || "Sub Title"}
+            {value.subTitle || "Sub Title"},{value.month || "Month and Year"}
           </Card.Title>
           <Card.Text>{value.description || "Description"}</Card.Text>
         </Card.Body>

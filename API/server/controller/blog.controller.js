@@ -5,7 +5,7 @@ const blogModel = require("../model/blog.model");
 exports.findBlog = asyncHandler(async (req, res) => {
   try {
     const blog = await blogModel.find();
-    res.status(201).json( blog);
+    res.status(201).json(blog);
   } catch (error) {
     console.error("Error Finding Blog:", error);
     res.status(500).json({
@@ -23,6 +23,7 @@ exports.postBlog = asyncHandler(async (req, res) => {
     title: req.body.title,
     subTitle: req.body.subTitle,
     description: req.body.description,
+    month: req.body.month,
   });
 
   data

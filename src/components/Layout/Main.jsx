@@ -11,7 +11,7 @@ import "./MainPage.css";
 const Main = () => {
   return (
     <>
-    <Header />
+    <Header name={"MY BLOG"}/>
       <div className="box">
         <div className="main">
           <MainLayoutList />

@@ -8,7 +8,7 @@ import "./AdminCss.css"
 const AdminPanel = () => {
   return (
     <>
-      <Header />
+      <Header name={"Admin Panel"} />
       <div className="box">
           <BlogCard />
       </div>

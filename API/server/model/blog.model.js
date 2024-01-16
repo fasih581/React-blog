@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const bolgSchema = new mongoose.Schema({
     blogImg: {
         type: String,
-        required: true,
+        required: [true, 'Blog Img required'],
       },
       title: {
         type: String,
@@ -17,6 +17,10 @@ const bolgSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Blog description required'],
       },
+      month: {
+        type: String,
+        required: [true, 'Month required'],
+    },
 });
 
 const blogModel = mongoose.model("newBlog", bolgSchema);

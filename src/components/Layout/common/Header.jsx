@@ -1,11 +1,11 @@
 import HeaderCss from "./header.module.css"
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div>
       <header className={HeaderCss.header}>
         <h1 className="heading">
-          MY BLOG
+        {props.name}
         </h1>
         <p>
           Welcome to the blog of <span>unknown</span>

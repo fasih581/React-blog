@@ -11,7 +11,7 @@ const MainLayout = ({ Blog }) => {
       <div className={MainCss.sub_Card}>
         <h3>{Blog.title}</h3>
         <h5>
-          {Blog.subTitle}
+          {Blog.subTitle},{Blog.month}
           {/* <span className={MainCss.date}> April 7, 2014</span> */}
         </h5>
         <p>
