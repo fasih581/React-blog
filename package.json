@@ -1,9 +1,9 @@
 {
+  "homepage": "http://fasih581.github.io/React-blog/",
   "name": "react-blog-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://fasih581.github.io/React-blog/",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
