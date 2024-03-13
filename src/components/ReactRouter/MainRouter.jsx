@@ -8,8 +8,8 @@ const MainRouter = () => {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/React-blog" element={<Home />} />
-        <Route path="/admin" element={<AdminPanel />} />
+        {/* <Route path="/React-blog" element={<Home />} /> */}
+        <Route path="admin" element={<AdminPanel />} />
       </Routes>
     </>
   );
